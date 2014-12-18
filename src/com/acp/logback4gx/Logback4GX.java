@@ -18,6 +18,8 @@ import java.util.Date;
  */
 public class Logback4GX {
 	public static final String OBJPROPERTY = "L4GXOBJECT";
+        public static final String VERSION = "1.2";
+
 	private Logger intLogger;
 	private String gxObj;
 	private Logback4GXErrorEnum lastError;
@@ -134,6 +136,14 @@ public class Logback4GX {
 	public void debug(String text, Object arg0, Object arg1) {
 		intLogger.debug(text, arg0, arg1);
 	}
+        
+	public void debug(String text, Object arg0, Object arg1, Object arg2 ) {
+		intLogger.debug(text, new Object[] {arg0,arg1,arg2} );
+	}        
+        
+	public void debug(String text, Object arg0, Object arg1, Object arg2, Object arg3 ) {
+		intLogger.debug(text, new Object[] {arg0,arg1,arg2,arg3} );
+	}          
 	
 	public void debug(String text, Vector<Object> collection) {
 		intLogger.debug(text, collection.toArray());
@@ -151,6 +161,14 @@ public class Logback4GX {
 		intLogger.trace(text, arg0, arg1);
 	}
 	
+      	public void trace(String text, Object arg0, Object arg1, Object arg2 ) {
+		intLogger.trace(text, new Object[] {arg0,arg1,arg2} );
+	}        
+        
+	public void trace(String text, Object arg0, Object arg1, Object arg2, Object arg3 ) {
+		intLogger.trace(text, new Object[] {arg0,arg1,arg2,arg3} );
+	}  
+        
 	public void trace(String text, Vector<Object> collection) {
 		intLogger.trace(text, collection.toArray());
 	}
@@ -166,6 +184,14 @@ public class Logback4GX {
 	public void info(String text, Object arg0, Object arg1) {
 		intLogger.info(text, arg0, arg1);
 	}
+        
+      	public void info(String text, Object arg0, Object arg1, Object arg2 ) {
+		intLogger.info(text, new Object[] {arg0,arg1,arg2} );
+	}        
+        
+	public void info(String text, Object arg0, Object arg1, Object arg2, Object arg3 ) {
+		intLogger.info(text, new Object[] {arg0,arg1,arg2,arg3} );
+	}         
 	
 	public void info(String text, Vector<Object> collection) {
 		intLogger.info(text, collection.toArray());
@@ -182,7 +208,15 @@ public class Logback4GX {
 	public void warn(String text, Object arg0, Object arg1) {
 		intLogger.warn(text, arg0, arg1);
 	}
-	
+
+        public void warn(String text, Object arg0, Object arg1, Object arg2 ) {
+		intLogger.warn(text, new Object[] {arg0,arg1,arg2} );
+	}        
+        
+	public void warn(String text, Object arg0, Object arg1, Object arg2, Object arg3 ) {
+		intLogger.warn(text, new Object[] {arg0,arg1,arg2,arg3} );
+	}     
+        
 	public void warn(String text, Vector<Object> collection) {
 		intLogger.warn(text, collection.toArray());
 	}	
@@ -198,10 +232,20 @@ public class Logback4GX {
 	public void error(String text, Object arg0, Object arg1) {
 		intLogger.error(text, arg0, arg1);
 	}
+
+        public void error(String text, Object arg0, Object arg1, Object arg2 ) {
+		intLogger.error(text, new Object[] {arg0,arg1,arg2} );
+	}        
+        
+	public void error(String text, Object arg0, Object arg1, Object arg2, Object arg3 ) {
+		intLogger.error(text, new Object[] {arg0,arg1,arg2,arg3} );
+	}           
 	
 	public void error(String text, Vector<Object> collection) {
 		intLogger.error(text, collection.toArray());
 	}
 		
-	
+        public static String getVERSION() {
+            return VERSION;
+        }	
 }

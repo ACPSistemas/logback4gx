@@ -52,6 +52,8 @@ public class Test {
 //		log.putProperty("nombre", "sebastian");
 		
 		log.debug("Hola {}", "otro mundo");
+                log.debug("Hola version {} y otros {} {} {}", Logback4GX.getVERSION(),1,"pedro");
+                //log.debug("User {}", GxPropertyReader.getGxDataStoreUser());
 //		long ts = 1340027230209l;
 //		System.out.println(Logback4GX.getDateFromTimestamp(ts));
 		
